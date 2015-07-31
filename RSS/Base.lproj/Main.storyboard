@@ -4,6 +4,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="Lie-rH-lV0">
+            <objects>
+                <viewController id="IjT-f9-jwa" customClass="DetailViewController" customModule="RSS" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwR-nX-oLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="427"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -18,10 +26,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="r2l-BH-sz7"/>
+                    <connections>
+                        <segue destination="IjT-f9-jwa" kind="show" identifier="toDetailSegue" id="4FX-IL-y1R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="1090"/>
+            <point key="canvasLocation" x="1048" y="1090"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O0m-LK-kxe">
