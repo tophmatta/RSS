@@ -14,6 +14,9 @@
 		6DA008821B6B06AF00E40305 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA008801B6B06AF00E40305 /* LaunchScreen.xib */; };
 		6DA0088E1B6B06AF00E40305 /* RSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0088D1B6B06AF00E40305 /* RSSTests.swift */; };
 		6DA008981B6B140C00E40305 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA008971B6B140C00E40305 /* DetailViewController.swift */; };
+		F1B4143F1B6C238800F400B2 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B4143E1B6C238800F400B2 /* FeedModel.swift */; };
+		F1B414411B6C23BA00F400B2 /* FeedHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B414401B6C23BA00F400B2 /* FeedHelper.swift */; };
+		F1B414431B6C23CA00F400B2 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B414421B6C23CA00F400B2 /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		6DA0088C1B6B06AF00E40305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DA0088D1B6B06AF00E40305 /* RSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSTests.swift; sourceTree = "<group>"; };
 		6DA008971B6B140C00E40305 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F1B4143E1B6C238800F400B2 /* FeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		F1B414401B6C23BA00F400B2 /* FeedHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedHelper.swift; sourceTree = "<group>"; };
+		F1B414421B6C23CA00F400B2 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,9 @@
 				6DA008771B6B06AF00E40305 /* AppDelegate.swift */,
 				6DA008791B6B06AF00E40305 /* ViewController.swift */,
 				6DA008971B6B140C00E40305 /* DetailViewController.swift */,
+				F1B4143E1B6C238800F400B2 /* FeedModel.swift */,
+				F1B414401B6C23BA00F400B2 /* FeedHelper.swift */,
+				F1B414421B6C23CA00F400B2 /* Article.swift */,
 				6DA0087B1B6B06AF00E40305 /* Main.storyboard */,
 				6DA0087E1B6B06AF00E40305 /* Images.xcassets */,
 				6DA008801B6B06AF00E40305 /* LaunchScreen.xib */,
@@ -217,7 +226,10 @@
 			files = (
 				6DA008981B6B140C00E40305 /* DetailViewController.swift in Sources */,
 				6DA0087A1B6B06AF00E40305 /* ViewController.swift in Sources */,
+				F1B414431B6C23CA00F400B2 /* Article.swift in Sources */,
+				F1B414411B6C23BA00F400B2 /* FeedHelper.swift in Sources */,
 				6DA008781B6B06AF00E40305 /* AppDelegate.swift in Sources */,
+				F1B4143F1B6C238800F400B2 /* FeedModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +425,7 @@
 				6DA008931B6B06AF00E40305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DA008941B6B06AF00E40305 /* Build configuration list for PBXNativeTarget "RSSTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +434,7 @@
 				6DA008961B6B06AF00E40305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
