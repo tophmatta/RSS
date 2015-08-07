@@ -8,14 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController, FeedModelDelegate {
+class ViewController: UIViewController, FeedModelDelegate, UITableViewDelegate, UITableViewDataSource {
     
     let feedModel:FeedModel = FeedModel()
     var articles:[Article] = [Article]()
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Set delegates of table view
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
         // Set itself as the delegate for the feedmodel
         self.feedModel.delegate = self
@@ -41,7 +47,28 @@ class ViewController: UIViewController, FeedModelDelegate {
         // Feed model has notified view controller that articles are ready
         self.articles = self.feedModel.articles
         
-        // To do: Display articles in tableview
+        // Display articles in tableview
+        self.tableView.reloadData()
+    }
+    
+    // Table view delegates method
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.articles.count
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        // Try to reuse cell
+        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("BasicCell") as! UITableViewCell
+        
+        // Set properties
+        let currentArticleToDisplay:Article = self.articles[indexPath.row]
+        cell.textLabel!.text = currentArticleToDisplay.articleTitle
+        
+        // Return the cell
+        return cell
     }
 
 }
