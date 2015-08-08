@@ -70,6 +70,12 @@ class ViewController: UIViewController, FeedModelDelegate, UITableViewDelegate, 
         // Return the cell
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // User selected a row
+        
+        // Trigger the segue to go to the detail view
+    }
 
 }
 

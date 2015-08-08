@@ -58,19 +58,27 @@ class FeedModel: NSObject, NSXMLParserDelegate {
             
         }
         
+        if elementName == "entry" {
+            
+            // Start new article
+            self.currentlyConstructingArticle = Article()
+        }
+        
     }
     
     func parser(parser: NSXMLParser, foundCharacters string: String?) {
         
-        if self.currentElement == "entry" ||
-           self.currentElement == "title" ||
-           self.currentElement == "content" ||
-           self.currentElement == "link" {
-            
-            self.foundCharacters += string!
+        if let chars = string {
+        
+            if self.currentElement == "entry" ||
+               self.currentElement == "title" ||
+               self.currentElement == "content" ||
+               self.currentElement == "link" {
                 
+                self.foundCharacters += chars
+                    
+            }
         }
-    
     }
     
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
@@ -78,11 +86,9 @@ class FeedModel: NSObject, NSXMLParserDelegate {
         if elementName == "title" {
             
             // Parsing of the title element is complete, save the data
-            self.currentlyConstructingArticle.articleTitle = foundCharacters
-            
-            // Reset found characters
-            self.foundCharacters = ""
-            
+            let title:String = foundCharacters.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            self.currentlyConstructingArticle.articleTitle = title
+
         }
         else if elementName == "content" {
             
@@ -90,30 +96,23 @@ class FeedModel: NSObject, NSXMLParserDelegate {
             self.currentlyConstructingArticle.articleDesc = foundCharacters
             
             // To Do: Extract out article image from the content and save it to the articleImageUrl property of the article obj
-            
-            // Reset found characters
-            self.foundCharacters = ""
+
         }
         else if elementName == "link" {
             
             // Parsing of the link element is complete, grab the href key value pair out of the attrributes dict
             self.currentlyConstructingArticle.articleLink = self.attributes!["href"] as! String
-            
-            
-            // Reset found characters
-            self.foundCharacters = ""
+
         }
         else if elementName == "entry"{
             
             // Parsing of an entry element is complete, append the article object to our array and start a new article obj
             self.articles.append(self.currentlyConstructingArticle)
             
-            // Start new article
-            self.currentlyConstructingArticle = Article()
-            
-            // Reset found characters
-            self.foundCharacters = ""
         }
+        
+        // Reset found characters
+        self.foundCharacters = ""
         
     }
     
