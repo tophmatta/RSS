@@ -22,6 +22,7 @@ class ViewController: UIViewController, FeedModelDelegate, UITableViewDelegate, 
         // Set delegates of table view
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.layoutMargins = UIEdgeInsetsZero
         
         // Set itself as the delegate for the feedmodel
         self.feedModel.delegate = self
@@ -63,9 +64,21 @@ class ViewController: UIViewController, FeedModelDelegate, UITableViewDelegate, 
         // Try to reuse cell
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("BasicCell") as! UITableViewCell
         
+        // Grab the elements using the tag
+        let label:UILabel? = cell.viewWithTag(1) as! UILabel?
+        let imageView:UIImageView? = cell.viewWithTag(2) as! UIImageView?
+        
+        
+        
         // Set properties
-        let currentArticleToDisplay:Article = self.articles[indexPath.row]
-        cell.textLabel!.text = currentArticleToDisplay.articleTitle
+        if let actualLabel = label {
+            
+            let currentArticleToDisplay:Article = self.articles[indexPath.row]
+            actualLabel.text = currentArticleToDisplay.articleTitle
+        }
+        
+        // Set insets to zero
+        cell.layoutMargins = UIEdgeInsetsZero
         
         // Return the cell
         return cell
