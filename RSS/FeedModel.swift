@@ -76,7 +76,6 @@ class FeedModel: NSObject, NSXMLParserDelegate {
                self.currentElement == "link" {
                 
                 self.foundCharacters += chars
-                    
             }
         }
     }
@@ -88,15 +87,46 @@ class FeedModel: NSObject, NSXMLParserDelegate {
             // Parsing of the title element is complete, save the data
             let title:String = foundCharacters.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             self.currentlyConstructingArticle.articleTitle = title
-
         }
         else if elementName == "content" {
             
             // Parsing of the content element is complete, save data into article obj
             self.currentlyConstructingArticle.articleDesc = foundCharacters
             
-            // To Do: Extract out article image from the content and save it to the articleImageUrl property of the article obj
-
+            // Extract out article image from the content and save it to the articleImageUrl property of the article obj
+            
+            // Search for http
+            if let startRange = foundCharacters.rangeOfString("http", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil, locale: nil) {
+                
+                // If found, search for .jpg
+                if let endRange = foundCharacters.rangeOfString(".jpg", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil, locale: nil) {
+                    
+                    // Take the substring out from startrange to endrange
+                    let imgString:String = foundCharacters.substringWithRange(Range<String.Index>(start: startRange.startIndex, end: endRange.endIndex))
+                    
+                    // Assign to article property
+                    self.currentlyConstructingArticle.articleImageUrl = imgString
+                }
+                // If .jpg is not found, search for .png
+                else if let endRange = foundCharacters.rangeOfString(".png", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil, locale: nil){
+                    
+                    // Take the substring out from startrange to endrange
+                    let imgString:String = foundCharacters.substringWithRange(Range<String.Index>(start: startRange.startIndex, end: endRange.endIndex))
+                    
+                    // Assign to article property
+                    self.currentlyConstructingArticle.articleImageUrl = imgString
+                }
+                // If .jpg or .png is not found, search for .jpeg
+                else if let endRange = foundCharacters.rangeOfString(".jpeg", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil, locale: nil){
+                    
+                    // Take the substring out from startrange to endrange
+                    let imgString:String = foundCharacters.substringWithRange(Range<String.Index>(start: startRange.startIndex, end: endRange.endIndex))
+                    
+                    // Assign to article property
+                    self.currentlyConstructingArticle.articleImageUrl = imgString
+                }
+            
+            }
         }
         else if elementName == "link" {
             
@@ -108,7 +138,6 @@ class FeedModel: NSObject, NSXMLParserDelegate {
             
             // Parsing of an entry element is complete, append the article object to our array and start a new article obj
             self.articles.append(self.currentlyConstructingArticle)
-            
         }
         
         // Reset found characters

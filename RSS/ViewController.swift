@@ -31,6 +31,11 @@ class ViewController: UIViewController, FeedModelDelegate, UITableViewDelegate, 
         // Fire off req to download articles in the background
         self.feedModel.getArticles()
         
+        // Add icon to nav item title bar
+        let titleIcon:UIImageView = UIImageView(frame: CGRectMake(0, 0, 41, 33))
+        titleIcon.image = UIImage(named: "vergeicon")
+        self.navigationItem.titleView = titleIcon
+        
         
     }
 
@@ -64,13 +69,32 @@ class ViewController: UIViewController, FeedModelDelegate, UITableViewDelegate, 
         let label:UILabel? = cell.viewWithTag(1) as! UILabel?
         let imageView:UIImageView? = cell.viewWithTag(2) as! UIImageView?
         
-        
+        // Current article to display
+        let currentArticleToDisplay:Article = self.articles[indexPath.row]
         
         // Set properties
         if let actualLabel = label {
             
-            let currentArticleToDisplay:Article = self.articles[indexPath.row]
             actualLabel.text = currentArticleToDisplay.articleTitle
+        }
+        
+        if let actualImageView = imageView {
+            
+            // Imageview actually exists
+            if currentArticleToDisplay.articleImageUrl != "" {
+                
+                // Image url exists, so download it
+                let url:NSURL? = NSURL(string: currentArticleToDisplay.articleImageUrl)
+                let imageRequest = NSURLRequest(URL: url!)
+                
+                // Fire off the request to download it
+                NSURLConnection.sendAsynchronousRequest(imageRequest, queue: NSOperationQueue.mainQueue(), completionHandler: {(response, data, error) in
+                    
+                    // Assign the data to the imageview
+                    actualImageView.image = UIImage(data: data)
+                
+                })
+            }
         }
         
         // Set insets to zero

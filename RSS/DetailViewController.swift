@@ -18,6 +18,10 @@ class DetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        // Add icon to nav item title bar
+        let titleIcon:UIImageView = UIImageView(frame: CGRectMake(0, 0, 41, 33))
+        titleIcon.image = UIImage(named: "vergeicon")
+        self.navigationItem.titleView = titleIcon
         
     }
     
