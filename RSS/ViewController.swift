@@ -12,6 +12,7 @@ class ViewController: UIViewController, FeedModelDelegate, UITableViewDelegate, 
     
     let feedModel:FeedModel = FeedModel()
     var articles:[Article] = [Article]()
+    var selectedArticle:Article?
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -37,11 +38,6 @@ class ViewController: UIViewController, FeedModelDelegate, UITableViewDelegate, 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-    }
-    
     // Feed model Delegate Methods
     
     func articlesReady() {
@@ -85,10 +81,26 @@ class ViewController: UIViewController, FeedModelDelegate, UITableViewDelegate, 
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // User selected a row
+        // Keep track of which article user selected
+        self.selectedArticle = self.articles[indexPath.row]
         
         // Trigger the segue to go to the detail view
+        self.performSegueWithIdentifier("toDetailSegue", sender: self)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Get destination to view controller
+        let detailVC = segue.destinationViewController as! DetailViewController
+        
+        // Pass along the selected article
+        detailVC.articleToDisplay = self.selectedArticle
+        
+    }
+    
+    
+    
+    
 
 }
 
