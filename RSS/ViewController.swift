@@ -31,12 +31,8 @@ class ViewController: UIViewController, FeedModelDelegate, UITableViewDelegate, 
         // Fire off req to download articles in the background
         self.feedModel.getArticles()
         
-        // Add icon to nav item title bar
-        let titleIcon:UIImageView = UIImageView(frame: CGRectMake(0, 0, 41, 33))
-        titleIcon.image = UIImage(named: "vergeicon")
-        self.navigationItem.titleView = titleIcon
-        
-        
+        // Add icon to nav item title bar and set image fit
+        self.navigationItem.title = "Pitchfork Album Reviews"
     }
 
     override func didReceiveMemoryWarning() {
@@ -119,6 +115,16 @@ class ViewController: UIViewController, FeedModelDelegate, UITableViewDelegate, 
         
         // Pass along the selected article
         detailVC.articleToDisplay = self.selectedArticle
+        
+    }
+    
+    // MARK: Share button impl.
+    
+    @IBAction func shareButtonPressed(sender: AnyObject) {
+        let link = "http://swyse.co"
+        let linkText = "Check out dis tyte app for reading the newest P4K albums reviews"
+        let vc = UIActivityViewController(activityItems: [linkText, link], applicationActivities: nil)
+        self.presentViewController(vc, animated: true, completion: nil)
         
     }
     

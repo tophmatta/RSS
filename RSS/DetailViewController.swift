@@ -12,6 +12,8 @@ class DetailViewController: UIViewController {
     
     var articleToDisplay:Article?
     @IBOutlet var webView: UIWebView!
+    var toolbarHidden:Bool = false
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +21,8 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // Add icon to nav item title bar
-        let titleIcon:UIImageView = UIImageView(frame: CGRectMake(0, 0, 41, 33))
-        titleIcon.image = UIImage(named: "vergeicon")
-        self.navigationItem.titleView = titleIcon
+        self.navigationItem.title = "Review"
+        
         
     }
     
@@ -42,6 +43,8 @@ class DetailViewController: UIViewController {
                 self.webView.loadRequest(urlRequest)
             }
         }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +52,8 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+
 
     /*
     // MARK: - Navigation

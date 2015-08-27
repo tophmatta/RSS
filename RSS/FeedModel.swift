@@ -17,7 +17,7 @@ protocol FeedModelDelegate {
 
 class FeedModel: NSObject {
     
-    let feedUrlString:String = "http://www.theverge.com/rss/frontpage"
+    let feedUrlString:String = "http://pitchfork.com/rss/reviews/albums/"
     var articles:[Article] = [Article]()
     var delegate:FeedModelDelegate?
     var feedHelper:FeedHelper = FeedHelper()

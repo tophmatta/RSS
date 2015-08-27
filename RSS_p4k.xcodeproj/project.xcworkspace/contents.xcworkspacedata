@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:RSS.xcodeproj">
+      location = "self:/Users/Toph/Documents/Xcode/RSS_p4k/RSS_p4k.xcodeproj">
    </FileRef>
 </Workspace>

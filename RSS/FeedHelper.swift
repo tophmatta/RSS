@@ -38,9 +38,9 @@ class FeedHelper: NSObject, NSXMLParserDelegate {
    
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
         
-        if elementName == "entry" ||
+        if elementName == "item" ||
             elementName == "title" ||
-            elementName == "content" ||
+            elementName == "enclosure" ||
             elementName == "link" {
                 
                 self.currentElement = elementName
@@ -48,7 +48,7 @@ class FeedHelper: NSObject, NSXMLParserDelegate {
                 
         }
         
-        if elementName == "entry" {
+        if elementName == "item" {
             
             // Start new article
             self.currentlyConstructingArticle = Article()
@@ -60,9 +60,9 @@ class FeedHelper: NSObject, NSXMLParserDelegate {
         
         if let chars = string {
             
-            if self.currentElement == "entry" ||
+            if self.currentElement == "item" ||
                 self.currentElement == "title" ||
-                self.currentElement == "content" ||
+                self.currentElement == "enclosure" ||
                 self.currentElement == "link" {
                     
                     self.foundCharacters += chars
@@ -78,10 +78,10 @@ class FeedHelper: NSObject, NSXMLParserDelegate {
             let title:String = foundCharacters.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             self.currentlyConstructingArticle.articleTitle = title
         }
-        else if elementName == "content" {
+        else if elementName == "enclosure" {
             
             // Parsing of the content element is complete, save data into article obj
-            self.currentlyConstructingArticle.articleDesc = foundCharacters
+            self.currentlyConstructingArticle.articleImageUrl = self.attributes!["url"] as! String
             
             // Extract out article image from the content and save it to the articleImageUrl property of the article obj
             
@@ -121,10 +121,10 @@ class FeedHelper: NSObject, NSXMLParserDelegate {
         else if elementName == "link" {
             
             // Parsing of the link element is complete, grab the href key value pair out of the attrributes dict
-            self.currentlyConstructingArticle.articleLink = self.attributes!["href"] as! String
+            self.currentlyConstructingArticle.articleLink = foundCharacters
             
         }
-        else if elementName == "entry" {
+        else if elementName == "item" {
             
             // Parsing of an entry element is complete, append the article object to our array and start a new article obj
             self.articles.append(self.currentlyConstructingArticle)

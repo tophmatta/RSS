@@ -15,23 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6DA008711B6B06AF00E40305"
-               BuildableName = "RSS.app"
-               BlueprintName = "RSS"
-               ReferencedContainer = "container:RSS.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DA008861B6B06AF00E40305"
-               BuildableName = "RSSTests.xctest"
-               BlueprintName = "RSSTests"
-               ReferencedContainer = "container:RSS.xcodeproj">
+               BuildableName = "RSS_p4k.app"
+               BlueprintName = "RSS_p4k"
+               ReferencedContainer = "container:RSS_p4k.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DA008861B6B06AF00E40305"
-               BuildableName = "RSSTests.xctest"
-               BlueprintName = "RSSTests"
-               ReferencedContainer = "container:RSS.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DA008711B6B06AF00E40305"
-            BuildableName = "RSS.app"
-            BlueprintName = "RSS"
-            ReferencedContainer = "container:RSS.xcodeproj">
+            BuildableName = "RSS_p4k.app"
+            BlueprintName = "RSS_p4k"
+            ReferencedContainer = "container:RSS_p4k.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DA008711B6B06AF00E40305"
-            BuildableName = "RSS.app"
-            BlueprintName = "RSS"
-            ReferencedContainer = "container:RSS.xcodeproj">
+            BuildableName = "RSS_p4k.app"
+            BlueprintName = "RSS_p4k"
+            ReferencedContainer = "container:RSS_p4k.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DA008711B6B06AF00E40305"
-            BuildableName = "RSS.app"
-            BlueprintName = "RSS"
-            ReferencedContainer = "container:RSS.xcodeproj">
+            BuildableName = "RSS_p4k.app"
+            BlueprintName = "RSS_p4k"
+            ReferencedContainer = "container:RSS_p4k.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
