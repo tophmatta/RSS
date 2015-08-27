@@ -30,14 +30,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6DA008721B6B06AF00E40305 /* RSS_p4k.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSS_p4k.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA008721B6B06AF00E40305 /* P4K Reviews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "P4K Reviews.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA008761B6B06AF00E40305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DA008771B6B06AF00E40305 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DA008791B6B06AF00E40305 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6DA0087C1B6B06AF00E40305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6DA0087E1B6B06AF00E40305 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6DA008811B6B06AF00E40305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6DA008871B6B06AF00E40305 /* RSS_p4kTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSS_p4kTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA008871B6B06AF00E40305 /* P4K ReviewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "P4K ReviewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA0088C1B6B06AF00E40305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DA0088D1B6B06AF00E40305 /* RSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSTests.swift; sourceTree = "<group>"; };
 		6DA008971B6B140C00E40305 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -76,8 +76,8 @@
 		6DA008731B6B06AF00E40305 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DA008721B6B06AF00E40305 /* RSS_p4k.app */,
-				6DA008871B6B06AF00E40305 /* RSS_p4kTests.xctest */,
+				6DA008721B6B06AF00E40305 /* P4K Reviews.app */,
+				6DA008871B6B06AF00E40305 /* P4K ReviewsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DA008711B6B06AF00E40305 /* RSS_p4k */ = {
+		6DA008711B6B06AF00E40305 /* P4K Reviews */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DA008911B6B06AF00E40305 /* Build configuration list for PBXNativeTarget "RSS_p4k" */;
+			buildConfigurationList = 6DA008911B6B06AF00E40305 /* Build configuration list for PBXNativeTarget "P4K Reviews" */;
 			buildPhases = (
 				6DA0086E1B6B06AF00E40305 /* Sources */,
 				6DA0086F1B6B06AF00E40305 /* Frameworks */,
@@ -139,14 +139,14 @@
 			);
 			dependencies = (
 			);
-			name = RSS_p4k;
+			name = "P4K Reviews";
 			productName = RSS;
-			productReference = 6DA008721B6B06AF00E40305 /* RSS_p4k.app */;
+			productReference = 6DA008721B6B06AF00E40305 /* P4K Reviews.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6DA008861B6B06AF00E40305 /* RSS_p4kTests */ = {
+		6DA008861B6B06AF00E40305 /* P4K ReviewsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DA008941B6B06AF00E40305 /* Build configuration list for PBXNativeTarget "RSS_p4kTests" */;
+			buildConfigurationList = 6DA008941B6B06AF00E40305 /* Build configuration list for PBXNativeTarget "P4K ReviewsTests" */;
 			buildPhases = (
 				6DA008831B6B06AF00E40305 /* Sources */,
 				6DA008841B6B06AF00E40305 /* Frameworks */,
@@ -157,9 +157,9 @@
 			dependencies = (
 				6DA008891B6B06AF00E40305 /* PBXTargetDependency */,
 			);
-			name = RSS_p4kTests;
+			name = "P4K ReviewsTests";
 			productName = RSSTests;
-			productReference = 6DA008871B6B06AF00E40305 /* RSS_p4kTests.xctest */;
+			productReference = 6DA008871B6B06AF00E40305 /* P4K ReviewsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -173,6 +173,7 @@
 				TargetAttributes = {
 					6DA008711B6B06AF00E40305 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = XXRYJDD55J;
 					};
 					6DA008861B6B06AF00E40305 = {
 						CreatedOnToolsVersion = 6.4;
@@ -180,7 +181,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6DA0086D1B6B06AF00E40305 /* Build configuration list for PBXProject "RSS_p4k" */;
+			buildConfigurationList = 6DA0086D1B6B06AF00E40305 /* Build configuration list for PBXProject "P4K Reviews" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -193,8 +194,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DA008711B6B06AF00E40305 /* RSS_p4k */,
-				6DA008861B6B06AF00E40305 /* RSS_p4kTests */,
+				6DA008711B6B06AF00E40305 /* P4K Reviews */,
+				6DA008861B6B06AF00E40305 /* P4K ReviewsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,7 +247,7 @@
 /* Begin PBXTargetDependency section */
 		6DA008891B6B06AF00E40305 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6DA008711B6B06AF00E40305 /* RSS_p4k */;
+			target = 6DA008711B6B06AF00E40305 /* P4K Reviews */;
 			targetProxy = 6DA008881B6B06AF00E40305 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -356,9 +357,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = RSS_p4k;
+				PRODUCT_NAME = "P4K Reviews";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -366,9 +370,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = RSS_p4k;
+				PRODUCT_NAME = "P4K Reviews";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -386,7 +393,7 @@
 				);
 				INFOPLIST_FILE = RSSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = RSS_p4kTests;
+				PRODUCT_NAME = "P4K ReviewsTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSS.app/RSS";
 			};
 			name = Debug;
@@ -401,7 +408,7 @@
 				);
 				INFOPLIST_FILE = RSSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = RSS_p4kTests;
+				PRODUCT_NAME = "P4K ReviewsTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSS.app/RSS";
 			};
 			name = Release;
@@ -409,7 +416,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6DA0086D1B6B06AF00E40305 /* Build configuration list for PBXProject "RSS_p4k" */ = {
+		6DA0086D1B6B06AF00E40305 /* Build configuration list for PBXProject "P4K Reviews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DA0088F1B6B06AF00E40305 /* Debug */,
@@ -418,7 +425,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DA008911B6B06AF00E40305 /* Build configuration list for PBXNativeTarget "RSS_p4k" */ = {
+		6DA008911B6B06AF00E40305 /* Build configuration list for PBXNativeTarget "P4K Reviews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DA008921B6B06AF00E40305 /* Debug */,
@@ -427,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DA008941B6B06AF00E40305 /* Build configuration list for PBXNativeTarget "RSS_p4kTests" */ = {
+		6DA008941B6B06AF00E40305 /* Build configuration list for PBXNativeTarget "P4K ReviewsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DA008951B6B06AF00E40305 /* Debug */,
