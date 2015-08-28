@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6DA008711B6B06AF00E40305"
-               BuildableName = "RSS_p4k.app"
+               BuildableName = "P4K Reviews.app"
                BlueprintName = "P4K Reviews"
                ReferencedContainer = "container:P4K Reviews.xcodeproj">
             </BuildableReference>
@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6DA008861B6B06AF00E40305"
-               BuildableName = "RSS_p4kTests.xctest"
+               BuildableName = "P4K ReviewsTests.xctest"
                BlueprintName = "P4K ReviewsTests"
                ReferencedContainer = "container:P4K Reviews.xcodeproj">
             </BuildableReference>
@@ -47,7 +47,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6DA008861B6B06AF00E40305"
-               BuildableName = "RSS_p4kTests.xctest"
+               BuildableName = "P4K ReviewsTests.xctest"
                BlueprintName = "P4K ReviewsTests"
                ReferencedContainer = "container:P4K Reviews.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DA008711B6B06AF00E40305"
-            BuildableName = "RSS_p4k.app"
+            BuildableName = "P4K Reviews.app"
             BlueprintName = "P4K Reviews"
             ReferencedContainer = "container:P4K Reviews.xcodeproj">
          </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DA008711B6B06AF00E40305"
-            BuildableName = "RSS_p4k.app"
+            BuildableName = "P4K Reviews.app"
             BlueprintName = "P4K Reviews"
             ReferencedContainer = "container:P4K Reviews.xcodeproj">
          </BuildableReference>
@@ -96,7 +96,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DA008711B6B06AF00E40305"
-            BuildableName = "RSS_p4k.app"
+            BuildableName = "P4K Reviews.app"
             BlueprintName = "P4K Reviews"
             ReferencedContainer = "container:P4K Reviews.xcodeproj">
          </BuildableReference>

@@ -17,8 +17,8 @@
                         <constraint firstAttribute="height" constant="65" id="hzN-Gn-4SF"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pitchforkicon" translatesAutoresizingMaskIntoConstraints="NO" id="mFn-i2-7hR">
-                    <rect key="frame" x="219" y="215" width="43" height="49"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pitchforkicon" translatesAutoresizingMaskIntoConstraints="NO" id="mFn-i2-7hR">
+                    <rect key="frame" x="220" y="223" width="41" height="33"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="41" id="DMq-fK-1mM"/>
                         <constraint firstAttribute="height" constant="33" id="mzv-Nc-OJo"/>
@@ -27,10 +27,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="centerY" secondItem="mFn-i2-7hR" secondAttribute="centerY" id="5Wo-pC-jbN"/>
                 <constraint firstItem="ngD-eK-WDL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JII-UG-tZQ"/>
-                <constraint firstAttribute="centerX" secondItem="mFn-i2-7hR" secondAttribute="centerX" id="WbQ-bj-vCd"/>
-                <constraint firstAttribute="centerY" secondItem="mFn-i2-7hR" secondAttribute="centerY" id="bh3-jz-Di6"/>
                 <constraint firstAttribute="trailing" secondItem="ngD-eK-WDL" secondAttribute="trailing" id="kai-Fj-4l7"/>
+                <constraint firstAttribute="centerX" secondItem="mFn-i2-7hR" secondAttribute="centerX" id="w2u-sR-fGe"/>
                 <constraint firstItem="ngD-eK-WDL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="z0f-Q9-Bte"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
