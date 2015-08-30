@@ -86,13 +86,7 @@
                             <constraint firstItem="xP7-z0-mc6" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="nyc-5g-6cz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="r2l-BH-sz7">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="action" id="sYh-F3-Vaq">
-                            <connections>
-                                <action selector="shareButtonPressed:" destination="vXZ-lx-hvc" id="VjZ-bX-ElP"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="r2l-BH-sz7"/>
                     <connections>
                         <outlet property="tableView" destination="xP7-z0-mc6" id="hbn-On-rTY"/>
                         <segue destination="IjT-f9-jwa" kind="show" identifier="toDetailSegue" id="4FX-IL-y1R"/>

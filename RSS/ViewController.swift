@@ -120,13 +120,13 @@ class ViewController: UIViewController, FeedModelDelegate, UITableViewDelegate, 
     
     // MARK: Share button impl.
     
-    @IBAction func shareButtonPressed(sender: AnyObject) {
+   /* @IBAction func shareButtonPressed(sender: AnyObject) {
         let link = "http://swyse.co"
         let linkText = "Check out dis tyte app for reading the newest P4K albums reviews"
         let vc = UIActivityViewController(activityItems: [linkText, link], applicationActivities: nil)
         self.presentViewController(vc, animated: true, completion: nil)
         
-    }
+    }*/
     
     
     
